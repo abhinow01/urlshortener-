@@ -9,7 +9,7 @@ const shortenUrl = async (req, res) => {
   }
 
   try {
-    const shortUrl =  " " + shortid.generate();
+    const shortUrl =   shortid.generate();
     const createdUrl =  await Url.create({originalUrl , shortUrl });
      
 res.status(200).json(createdUrl);
